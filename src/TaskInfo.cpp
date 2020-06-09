@@ -27,7 +27,7 @@ void TaskInfo::init (ProjectExplorer::Task &task) const {
 
 TaskInfo &TaskInfo::operator= (const ProjectExplorer::Task &right) {
   id_ = right.taskId;
-  description_ = right.description;
+  description_ = right.description();
   line_ = right.line;
   return (*this);
 }
